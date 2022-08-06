@@ -20,7 +20,7 @@ export const SketchComponent: React.FC<ComponentProps> = (
   props: ComponentProps,
 ) => {
   const setup = (p5: p5, canvasParentRef: Element) => {
-    p5.createCanvas(props.width, props.height).parent(canvasParentRef)
+    p5.createCanvas(props.width, props.height, p5.WEBGL).parent(canvasParentRef)
     events(p5, props)
   }
 
